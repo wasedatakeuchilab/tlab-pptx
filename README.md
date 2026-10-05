@@ -48,9 +48,7 @@ import tlab_pptx
 
 prs = tlab_pptx.new_presentation()
 slide = prs.slides[0]
-slide.update_title(
-    "The title string is here"
-).add_text(
+slide.update_title("The title string is here").add_text(
     "Hello, world!",
     left=2.5,
     top=2.5,
@@ -68,9 +66,7 @@ You can add a slide to the presentation by calling `prs.add_slide()`.
 ```python
 prs = tlab_pptx.new_presentation()
 slide = prs.add_slide()
-slide.update_title(
-    "This is the second slide"
-)
+slide.update_title("This is the second slide")
 prs.save("add_slide.pptx")
 ```
 
@@ -84,8 +80,7 @@ You can add a text by calling `slide.add_text()`.
 ```python
 prs = tlab_pptx.new_presentation()
 prs.slides[0].add_text(
-    "You can write\n"
-    "multiple lines.",
+    "You can write\nmultiple lines.",
     left=2.5,
     top=2.5,
     font_name="Arial",  # default font
@@ -155,9 +150,7 @@ You can add a date annotation on the bottom-right of the figure by using `tlab_p
 ```python
 import datetime
 
-fig.add_annotation(
-    tlab_pptx.get_date_annotation((2022, 1, 1))
-)
+fig.add_annotation(tlab_pptx.get_date_annotation((2022, 1, 1)))
 fig.show()
 ```
 
